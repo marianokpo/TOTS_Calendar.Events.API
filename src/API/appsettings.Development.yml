@@ -1,0 +1,15 @@
+AzureAd:
+    Instance: "https://login.microsoftonline.com"
+    TenantId: "common"
+    ClientId: "fe37d720-520d-4c0a-9861-61e1664e7398"
+    ClientSecret: "sq58Q~9C_wzTTBBNaCAgsiyTRwQpasXDchArxaPP"
+    Scopes: "api://fe37d720-520d-4c0a-9861-61e1664e7398/apiCalendar"
+    CallbackPath: "/signin-oidc"
+DownstreamApi: 
+    BaseUrl: "https://graph.microsoft.com/v1.0"
+    Scopes: "openid email profile offline_access Calendars.ReadWrite User.Read"
+    RedirectUri: "https://localhost:5001/docs/oauth2-redirect.html"
+TokenCacheDatabase:
+    ConnectionString: "Data Source=localhost;Initial Catalog=DistCache;Integrated Security=false;User ID=sa;Password=Damian89;Encrypt=False;"
+    SchemaName: "dbo"
+    TableName: "TestCache"
